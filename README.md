@@ -1,7 +1,7 @@
 # Jobs-API
 
 [API link https://jobs-api-job.herokuapp.com/](https://jobs-api-job.herokuapp.com/)
-
+project from the course [Node.js / Express Course - Build 4 Projects](https://www.youtube.com/watch?v=qwfE7fSVaZM)
 # Project Setup
 
 
