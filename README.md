@@ -1,6 +1,6 @@
 # Jobs-API
 
-[API link](https://jobs-api-job.herokuapp.com/)
+[API link https://jobs-api-job.herokuapp.com/](https://jobs-api-job.herokuapp.com/)
 
 # Project Setup
 
