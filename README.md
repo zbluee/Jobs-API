@@ -1,9 +1,4 @@
-# Task-Manager
-
-# Routers
-* auth.js
-* user.js
-
+# Jobs-API
 
 # Project Setup
 
