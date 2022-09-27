@@ -7,12 +7,17 @@ import { authRoute } from './routes/auth.js';
 import { jobsRoute } from './routes/jobs.js';
 import { errorHandlerMiddleware } from './middleware/error-handler.js';
 import { authMiddleware } from './middleware/authentication.js';
-
 // extra security packages
 import helmet from 'helmet';
 import cors from 'cors';
 import xss from 'xss-clean';
 import rateLimit from 'express-rate-limit';
+//swagger ui
+import swaggerUI from 'swagger-ui-express';
+import YAML from 'yamljs';
+
+const swaggerDoc = YAML.load('./docs-swagger.yaml');
+
  
 const app = express();
 const port = process.env.PORT || 3000;
@@ -30,8 +35,9 @@ app.use(xss());
 app.use(cors());
 //routes
 app.get('/', (req, res)=> {
-    res.send('jobs api');
+    res.send('<h1>jobs API</h1><a href="/api-docs">Documentaion</a>');
 });
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDoc))
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/jobs', authMiddleware, jobsRoute);
 app.use(errorHandlerMiddleware);

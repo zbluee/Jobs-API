@@ -26,7 +26,3 @@ const errorHandler = async (err, req, res, next) => {
 
 export {errorHandler as errorHandlerMiddleware}
 
-//to handle mongoose errors
-// name = ValidationError
-// duplicate error (email) code = 11000
-// cast error   name = CastError
