@@ -4,7 +4,7 @@ info:
   contact: {}
   version: '1.0'
 servers:
-- url: https://jobs-api-job.herokuapp.com/api/v1
+- url: https://jobs-api-ecxk.onrender.com/api/v1
   variables: {}
 paths:
   /jobs:
